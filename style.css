@@ -1,0 +1,119 @@
+/* Variables */
+:root {
+  --softBlue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --veryDarkBlue: hsl(217, 54%, 11%);
+  --mainDarkBlue: hsl(216, 50%, 16%);
+  --lineDarkBlue: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: var(--veryDarkBlue);
+  color: var(--white);
+  font-family: "Outfit", sans-serif;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+main {
+  background-color: var(--mainDarkBlue);
+  max-width: 375px;
+  margin-inline: auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--veryDarkBlue) 0px 7px 29px 0px;
+}
+
+.mainImg {
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin: 20px 0 5px 0;
+}
+
+p {
+  color: var(--softBlue);
+}
+
+h2 {
+  color: var(--cyan);
+  font-size: 1.125rem;
+}
+
+.amount {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--lineDarkBlue);
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  outline: 2px solid var(--white);
+}
+
+.user {
+  color: var(--white);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.gapOne {
+  gap: 10px;
+}
+
+.gapTwo {
+  gap: 20px;
+}
+
+.spaceBetween {
+  justify-content: space-between;
+}
